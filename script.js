@@ -1,86 +1,242 @@
-// Exo 2 : Le tueur en série
-// Un tueur en série nommé Jason est en cavale. Il est caché quelque part en forêt.
-// Une équipe de choc est présente pour le neutraliser.
-// Nous avons besoin d’un tueur nommé Jason et qui possède 100 points de vie.
-// Nous avons besoin de Caractéristiques de personnages avec des noms bien clichés (nerd, sportif, blonde…),
-// une probabilité de mourir, une de mettre des dégâts et une de mourir en mettant des dégâts (ex: 0.3, 0.5, 0.2)
-// Nous avons besoin de 5 Survivants avec un nom généré aléatoirement d’un tableau de prénoms et d’une
-// caractéristique prise de celles disponibles (toujours aléatoire).
-// Tant que le tueur n’est pas mort ou que les survivants n’ont pas tué Jason :
+"use strict";
 
-// Le tueur attaque un des survivants :
-// - soit le survivant meurt
-// - soit le survivant esquive et inflige 10 points de dégâts
-// - soit le survivant inflige 15 points de dégâts mais meurt
+//CONDITION
 
-// Les morts seront affichés à la fin
-// Un message est attendu pour chaque action (Jason a tué X, X a esquivé et a infligé X dmg, Jason est mort,
-// Les survivants ont gagné mais RIP à X, X, X…)
+let a=4;
+let b=4;
+let c=3;
 
-let morts = "" // tableau des morts pour les afficher a la fin
-
-let tueur = {
-    firstName : 'Jason',
-    pointsVie : 100 
-}    // profil tueur
-
-//tableau des profils des victimes 
-let survivants = [
- victime1 = {
-    firstName : "Nerd", 
-    pDm: 0.5,     // pDm = probabilite de mourir, pDef = prababilite de se defendre, pDmDef = probabilite de se defendre ET mourir. 
-    pDef : 0.3,
-    pDmDef : 0.5,
-},
- victime2 = {
-    firstName : "Sportif", 
-    pDm: 0.3,
-    pDef : 0.7,
-    pDmDef : 0.5,
-},
- victime3 = {
-    firstName : "Vieille", 
-    pDm: 0.7,
-    pDef : 0.2,
-    pDmDef : 0.3,
-},
- victime4 = {
-    firstName : "Bimbo", 
-    pDm: 0.5,
-    pDef : 0.3,
-    pDmDef : 0.4,
-},
- victime5 = {
-    firstName : "Enfant", 
-    pDm: 0.7,
-    pDef : 0.2,
-    pDmDef : 0.5,
+if(a==b){
+    console.log("egal a b"); 
+}else if (a==c){
+    console.log("egal a c"); 
+}else{
+    console.log("egal a rien");
 }
-]
-    function fight(){  // attaques
 
-        for (i=0; i < survivants.length ;i++){
-        let k =  Math.floor(Math.random() * 3); // probabilites
-        if(k == 1){
-            console.log(`${survivants[i].firstName} est mort(e).`); //s'affiche lorsque la victime ne se defend pas est meurt
-            morts += survivants[i].firstName + ", "
-            tueur.pointsVie = tueur.pointsVie - 0
-        }else if(k==2){
-          console.log (`${survivants[i].firstName} s'est defendu(e) et a survecu(e). -15hp a Jason`) //s'affiche lorsque la victime reussie a esquiver
-          tueur.pointsVie = tueur.pointsVie - 15
-        }else{
-          console.log (`${survivants[i].firstName} s'est defendu(e) mais n'a pas survecu(e). -25hp a Jason`)//s'affiche lorsque la victime se defend mais meurt 
-          tueur.pointsVie = tueur.pointsVie - 25
-        } 
-     }
-        
-        if(tueur.pointsVie > 0){ 
-            console.log("Jason a survecu"); //s'affiche si Jason survit
-        }else if(tueur.pointsVie <= 0){ 
-            console.log("Jason est mort"); //s'affiche si Jason meurt
-        }
+// BOUCLE
 
-        console.log(`RIP a ${morts} `); // affiche liste des morts a la fin 
+for(let a=1;a<5;a++);{
+    console.log("OKLM");
+}
+
+//tableau
+ let tableauName=[];
+ console.log(tableauFruit.push("Vincent"));
+ console.log(tableauFruit.push("Paul"));
+ console.log(tableauFruit.push("Arthur"));
+
+ /**                 Tableau
+ * 
+ * Declare un tableau vide names 
+ * Ajouter "vincent", "Paul", et "Arthur" dans le tableau via la methode push
+ * 
+ * Pour chaque element du tableau
+ * Ajouter a la fin "va a la peche"
+ * Afficher chaque element 
+ * 
+ */
+    // Correction + exercice while + execrice objet pokemon
+ 
+ "use strict";
+
+/**           CONDITION
+ * declarer trois variable a=4,b=4,c=3
+ * 
+ * a sera l expression de reference 
+ * si a est egal a b alor faire un console log('egal à b')
+ * 
+ * si a est egal a c alors faire un console log('egal à b')
+ * 
+ * par defaut il y a un console log("egal a rien")
+ */
+let a =4;
+let b=4;
+let c=3;
+
+switch(a){
+    case b:
+        console.log("égal à b");
+        break;
+    case c:
+        console.log("égal à c");
+        break;
+    default:
+        console.log("égal à rien");
+}
+
+/**            BOUCLE
+ *              FOR
+ * Declarer une variable a qui est egale à un entier positif
+ * 
+ * Faire un console log de 'OKLM' autant de fois que le valeur de a
+ * 
+ * 
+ */
+
+let aBis=4;
+for(let i=0;i<aBis;i++){
+    console.log('OKLM');
+}
+//          WHILE
+/**
+ * Declarer une varaible a qui est egale a 3
+ * tant que a est plus petit que 9 
+ * incremente a de 1
+ * si a est egal a 8 on arrete la boucle 
+ * si a est egal a 7 on revient au debut de la boucle 
+ * on console log(a)
+ */
+let aT=3;
+while(a<9){
+    aT++
+    if(aT==7){
+        continue
     }
-         
-        fight()
+    if(aT==8){
+        break
+    }
+    console.log(aT);
+}
+console.log('Jai cassé la boucle au bout de '+aT+" tours");
+
+/**         Fonction
+ * 
+ * 
+ * Declarer trois variables a="jean" et b="paul" et result
+ * 
+ * Declarer une fonction checkName(qui possede 2 parametres) qui verifie si les deux noms sont identique 
+ * 
+ * console log le result
+ * 
+ */
+
+let aQ="jean";
+let bBis="Paul";
+let result=checkName(a,b)
+
+function checkName(name1, name2){
+    if(name1===name2){
+        return true
+    }else{
+        return false
+    }
+}
+console.log(result);
+
+/**                 Tableau
+ * 
+ * Declare un tableau vide names 
+ * Ajouter "vincent", "Paul", et "Arthur" dans le tableau via la methode push
+ * 
+ * Pour chaque element du tableau
+ * 
+ * Ajouter a la fin "va a la peche"
+ * Afficher chaque element 
+ * 
+ */
+
+let names=[];
+names.push('Vincent',"Paul",'Arthur');
+
+names.forEach(name =>{
+    name += 'va a la peche ';
+    console.log(name)
+});
+
+/**             OBJECT
+ * 
+ * Declarer un Objet student avec name , favoriteFood et city 
+ * 
+ * Recuperer le nombre de caracteres dans chaues proprieter puis les additionner pour obtenir un nombre 
+ * 
+ * Si le nombre pair afficher dans la console "pair"
+ * Si le nombre est impair afficher dans la console "impaire"
+ * 
+ * Plusieurs solutions possibles 
+ * Object.keys()=> recuperer les proprieter=s 
+ * Object.values() => recuperer les valeurs
+ * 
+ */
+//Premiere exemple 
+// let student={
+//     name:'Nicolas',
+//     favoriteFood:"Salad",
+//     city:"Paris",
+// }
+// let values=Object.values(student);
+// console.log(values);
+// let resultBis=0;
+// values.forEach((values)=> {
+//     resultBis+=values.length
+// })
+// console.log(resultBis);
+//exemple 2
+let student={
+    name:'Nicolas',
+    favoriteFood:"Salad",
+    city:"Paris",
+}
+let values=Object.values(student);
+let count=values.reduce((acc,value)=>acc+value.length,0)
+console.log(count);
+
+
+/**             Class
+ * 
+ * Creer une class pokemon avec parametre name,attack,defense,hp,luck une methode isLucky et une methode attckPokemon
+ * 
+ * Creer deux instance de pokemon avec des stats differentes 
+ * 
+ * tant que l un deux n est pas mort 
+ * le premier attaue le second (isLucky + attackPokemon)
+ * afficher la vie et les degats endommagés du second
+ * si le second est mort arreter la boucle 
+ * le second attaque le premier (isLucky + attackPokemon)
+ * afficher la vie et les degats endommagés du premier
+ *  * si le premier est mort arreter la boucle 
+ * 
+ * afficher une message de fin pour le pokemon perdant
+ * 
+ * Formule
+ * degat =att de l'attaquant - def du defenseur
+ * la luck correspon a la probabilite de touche l'adversaire (precision en pourcentage)
+ * generer un nombre aleatoire avec math.random()
+ * Si le nombre est inferieur a luck du pokemon alors le pokemon peut attaquer 
+ */
+class Pokemon{
+    constructor(name,attack,defense,hp,luck){
+        this.name=name
+        this.attack=attack
+        this.defense=defense
+        this.hp=hp
+        this.luck=luck
+    }
+    attackPokemon(pokemon){
+        if(this.isLucky()){
+            let damage=this.attack-pokemon.defense
+            pokemon.hp-=damage
+            console.log(this.name+' a attqué '+pokemon.name+' pour '+damage+' de degat il lui reste '+pokemon.hp+" points de vie");
+        }else {
+            console.log(this.name+" a raté son attaque");
+        }
+    }
+    isLucky(){
+        return this.luck>Math.random()
+    }
+}
+let dracofeu=new Pokemon('Dracofeu',14,8,100,0.5);
+let boulbi=new Pokemon('Boulbi',18,4,70,0.8);
+
+while(dracofeu.hp >0 && boulbi.hp>0){
+    dracofeu.attackPokemon(boulbi)
+    if(boulbi.hp<=0){
+        console.log(boulbi.name+" is dead !");
+        break;
+    }
+    boulbi.attackPokemon(dracofeu)
+    if(dracofeu.hp<=0){
+        console.log(dracofeu.name+" is Dead !");
+        break
+    }
+}
